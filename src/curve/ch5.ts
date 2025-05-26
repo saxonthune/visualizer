@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { GUI } from 'three/examples/jsm/libs/lil-gui.module.min.js';
+import { GUI } from 'lil-gui';
 
 const TAU = Math.PI * 2;
 
@@ -173,4 +173,3 @@ function getPolarPosition(t: number, r_init: number, h_init: number, settings: S
     const angle = ((t * settings.rotationSpeed + r_init) % 1 * TAU);
     return [radius, angle];
 }
-

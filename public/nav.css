@@ -1,0 +1,38 @@
+#nav-container {
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  display: flex;
+  gap: 16px;
+  z-index: 10000;
+}
+
+#nav-container a {
+  text-decoration: none;
+}
+
+#nav-container button {
+  background: #222;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: all 0.2s ease;
+}
+
+#nav-container button:hover {
+  background: #333;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+#nav-container button .material-symbols-outlined {
+  color: white;
+  font-size: 24px;
+  line-height: 1;
+}
