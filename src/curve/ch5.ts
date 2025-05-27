@@ -20,9 +20,9 @@ const settings: Settings = {
   cols: 80,
   radiusShiftSpeed: 1,
   radiusPeriod: 3.5,
-  curveMagnitude: 0.2,
+  curveMagnitude: 0.4,
   curvePeriod: 2,
-  rotationSpeed: 1
+  rotationSpeed: 2
 };
 
 const scene = new THREE.Scene();
@@ -59,14 +59,22 @@ cubes.forEach((cube) => {
     scene.add(cube);
 });
 
-
-
 const gui = new GUI();
 gui.add(settings, 'speed', 0.10, 0.5, 0.05).name('Animation Speed');
-gui.add(settings, 'curveMagnitude', 0, 1).name('Bulbousness');
+gui.add(settings, 'curveMagnitude', 0, 1, 0.01).name('Bulbousness');
 gui.add(settings, 'curvePeriod', 0, 6, 1).name('Bulbs');
 gui.add(settings, 'radiusShiftSpeed', -4, 4, 0.25).name('Bulb Speed');
 gui.add(settings, 'rotationSpeed', -6, 6, 1).name('Rotation Speed');
+
+function handleGUIForScreenSize() {
+  if (window.innerWidth <= 768) {
+    gui.close();
+  } else {
+    gui.open();
+  }
+}
+handleGUIForScreenSize();
+window.addEventListener('resize', handleGUIForScreenSize);
 
 const meshFolder = gui.addFolder('Object Settings');
 meshFolder.add(settings, 'cols', 1, 200).name('Rings').step(1);

@@ -7,7 +7,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 export default defineConfig({
     base: '/viz/',
     server: {
-        open: '/viz/'
+        open: '/viz/pages/curve/5/index.html'
     },
     build: {
         rollupOptions: {
