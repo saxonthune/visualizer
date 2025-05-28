@@ -1,0 +1,20 @@
+{
+  "name": "visualizer",
+  "version": "1.0.0",
+  "description": "three.js practice",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/three": "^0.176.0",
+    "lil-gui": "^0.20.0",
+    "three": "^0.176.0"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
+  }
+}
